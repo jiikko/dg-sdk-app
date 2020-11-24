@@ -13,7 +13,26 @@
 		4166B2D9256CA69300EB95C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166B2D7256CA69300EB95C7 /* Main.storyboard */; };
 		4166B2DB256CA69400EB95C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4166B2DA256CA69400EB95C7 /* Assets.xcassets */; };
 		4166B2DE256CA69400EB95C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166B2DC256CA69400EB95C7 /* LaunchScreen.storyboard */; };
+		41EFFBD6256CA87B0067AD16 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4166B2FE256CA6EA00EB95C7 /* SystemConfiguration.framework */; };
+		41EFFBD7256CA87B0067AD16 /* SystemConfiguration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4166B2FE256CA6EA00EB95C7 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		41EFFBF3256CAA860067AD16 /* DeployGateSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EFFBF2256CAA860067AD16 /* DeployGateSDK.framework */; };
+		41EFFBF4256CAA860067AD16 /* DeployGateSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41EFFBF2256CAA860067AD16 /* DeployGateSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4166B2FC256CA6D600EB95C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				41EFFBD7256CA87B0067AD16 /* SystemConfiguration.framework in Embed Frameworks */,
+				41EFFBF4256CAA860067AD16 /* DeployGateSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4166B2CE256CA69300EB95C7 /* dgdgd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dgdgd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +43,9 @@
 		4166B2DA256CA69400EB95C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4166B2DD256CA69400EB95C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4166B2DF256CA69400EB95C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4166B2FE256CA6EA00EB95C7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		41EFFBD2256CA7FC0067AD16 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		41EFFBF2256CAA860067AD16 /* DeployGateSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeployGateSDK.framework; path = "../../src/DeployGateSDK-iOS/build/DeployGateSDK1.0.8.embeddedframework/DeployGateSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EFFBD6256CA87B0067AD16 /* SystemConfiguration.framework in Frameworks */,
+				41EFFBF3256CAA860067AD16 /* DeployGateSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				4166B2D0256CA69300EB95C7 /* dgdgd */,
 				4166B2CF256CA69300EB95C7 /* Products */,
+				4166B2FD256CA6EA00EB95C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +88,18 @@
 				4166B2DA256CA69400EB95C7 /* Assets.xcassets */,
 				4166B2DC256CA69400EB95C7 /* LaunchScreen.storyboard */,
 				4166B2DF256CA69400EB95C7 /* Info.plist */,
+				41EFFBD2256CA7FC0067AD16 /* Bridging-Header.h */,
 			);
 			path = dgdgd;
+			sourceTree = "<group>";
+		};
+		4166B2FD256CA6EA00EB95C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41EFFBF2256CAA860067AD16 /* DeployGateSDK.framework */,
+				4166B2FE256CA6EA00EB95C7 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +112,7 @@
 				4166B2CA256CA69300EB95C7 /* Sources */,
 				4166B2CB256CA69300EB95C7 /* Frameworks */,
 				4166B2CC256CA69300EB95C7 /* Resources */,
+				4166B2FC256CA6D600EB95C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -108,6 +144,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 4166B2C5256CA69300EB95C7;
 			productRefGroup = 4166B2CF256CA69300EB95C7 /* Products */;
@@ -288,12 +325,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DK5Z59QHXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dgdgd/DeployGateSDK1.0.8.embeddedframework",
+					"$(PROJECT_DIR)/DeployGateSDK1.0.8.embeddedframework",
+				);
 				INFOPLIST_FILE = dgdgd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = koji.dgdgd;
+				PRODUCT_BUNDLE_IDENTIFIER = "koji.dg-sdk-2020-11-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +349,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DK5Z59QHXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dgdgd/DeployGateSDK1.0.8.embeddedframework",
+					"$(PROJECT_DIR)/DeployGateSDK1.0.8.embeddedframework",
+				);
 				INFOPLIST_FILE = dgdgd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = koji.dgdgd;
+				PRODUCT_BUNDLE_IDENTIFIER = "koji.dg-sdk-2020-11-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
