@@ -11,10 +11,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NSLog("booting....")
         // Override point for customization after application launch.
         DeployGateSDK
             .sharedInstance()
-            .launchApplication(withAuthor: "USERNAME", key: "API_KEY")
+            .launchApplication(withAuthor: "kawaguchi", key: "9b69d2eb9d0332e6c2aec1c000d9bf2f8474b1f1", userInfomationEnabled: true)
         return true
     }
 
@@ -32,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+         return DeployGateSDK.sharedInstance().handleOpen(url as URL?, sourceApplication: sourceApplication, annotation: annotation)
+    }
 }
 

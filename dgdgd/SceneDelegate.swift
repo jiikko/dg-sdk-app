@@ -47,6 +47,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
+    {
+        if let urlContext = URLContexts.first {
+            NSLog("in open url!!!!!!!")
+            let url = urlContext.url
+            DeployGateSDK.sharedInstance().handleOpen(url)
+        }
+    }
+
 
 }
 
