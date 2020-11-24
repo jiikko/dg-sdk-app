@@ -64,6 +64,7 @@
 		4166B2C5256CA69300EB95C7 = {
 			isa = PBXGroup;
 			children = (
+				41EFFBD2256CA7FC0067AD16 /* Bridging-Header.h */,
 				4166B2D0256CA69300EB95C7 /* dgdgd */,
 				4166B2CF256CA69300EB95C7 /* Products */,
 				4166B2FD256CA6EA00EB95C7 /* Frameworks */,
@@ -88,7 +89,6 @@
 				4166B2DA256CA69400EB95C7 /* Assets.xcassets */,
 				4166B2DC256CA69400EB95C7 /* LaunchScreen.storyboard */,
 				4166B2DF256CA69400EB95C7 /* Info.plist */,
-				41EFFBD2256CA7FC0067AD16 /* Bridging-Header.h */,
 			);
 			path = dgdgd;
 			sourceTree = "<group>";
